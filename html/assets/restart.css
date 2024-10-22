@@ -1,0 +1,56 @@
+body {
+    background-color: #FEF8F8;
+    /* background-color: #d6d3d3; */
+}
+
+/* Style the download button */
+.button {
+    background: linear-gradient(to right, #B97806, #F8B100, #DBA92C);
+    color: rgb(20, 18, 18);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Add hover effect for the button */
+.button:hover {
+    background: linear-gradient(to right, #855902, #b88309, #f3b944); /* Darker gradient */
+}
+/* HTML: <div class="loader"></div> */
+
+.loader {
+    width: 120px;
+    height: 20px;
+    border-radius: 20px;
+    background: linear-gradient(orange 0 0) 0/0% no-repeat lightblue;
+    animation: l2 2s infinite steps(10);
+    display: none; /* Hide loader by default */
+    margin: auto; /* Center horizontally */
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+@keyframes l2 {
+    100% { background-size: 110%; }
+}
+
+
+.loader::after {
+    content: '';
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+/* 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
